@@ -19,6 +19,7 @@ int main(int argc, char const *argv[])
 {
     long E;
     scanf("%ld",&E);
+ 
     printf("%d\n",q7s(E));
     return 0;
 }

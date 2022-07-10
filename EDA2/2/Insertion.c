@@ -23,7 +23,6 @@ void insertionsort(int *v,int l,int r)
   }
 }
 
-
 int main(int argc, char const *argv[])
 {
     int I[50000],c=0;

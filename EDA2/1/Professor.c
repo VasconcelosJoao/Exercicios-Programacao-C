@@ -21,6 +21,7 @@ void fumn(int *v, int umn, int tam)
 
 }
 
+
 int main(void)
 {
     int *v = NULL;

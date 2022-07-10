@@ -7,8 +7,6 @@ typedef struct celula {
   struct celula *prox;
 } celula;
 
-
-
 celula *criapilha(){
 celula *pilha=malloc(sizeof(celula));
 pilha->prox=NULL;

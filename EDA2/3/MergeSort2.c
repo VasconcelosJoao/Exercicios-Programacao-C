@@ -7,7 +7,6 @@ typedef long int Item;
 #define exch(A,B) { Item t; t=A;A=B;B=t; }
 #define cmpexch(A,B) { if (less(B,A)) exch(A,B); }
 
-
 void merge(Item *V, int l, int m, int r)
 {
   Item *R=malloc(sizeof(Item)*(r-l+1));

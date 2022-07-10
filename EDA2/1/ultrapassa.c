@@ -24,7 +24,6 @@ void insere_lista (celula *c, int x) {
 aux->prox=novo;
 
 
-
 }
 
 void imprime(celula *le,int min){

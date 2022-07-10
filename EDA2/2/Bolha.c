@@ -13,7 +13,6 @@ void boubblesort(int *v,int l,int r)
                 cmpexch(v[j],v[j+1]);
     }
 
-
 int main(int argc, char const *argv[])
 {
     int I[1000],c=0;

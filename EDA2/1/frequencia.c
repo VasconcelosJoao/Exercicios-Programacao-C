@@ -12,6 +12,7 @@ int main() {
       res += 1;
     }
   }
+  
   printf("%d\n", res);
   return 0;
 }

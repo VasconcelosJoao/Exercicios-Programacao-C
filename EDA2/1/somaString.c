@@ -10,7 +10,6 @@ T=T+(St[i]-'0');
 }
 return T;
 
-
 }
 
 int main(int argc, char const *argv[])

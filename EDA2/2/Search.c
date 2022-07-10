@@ -69,15 +69,5 @@ int main(int argc, char const *argv[])
         printFunc(itens,I[i],N);
     }
     
-
-
-
-
-
-
-
-
-
-
     return 0;
 }

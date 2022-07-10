@@ -18,7 +18,6 @@ void selecSort(int *v,int l,int r)
         selecSort(v,l+1,r);
     }
 
-
 int main(int argc, char const *argv[])
 {
     int I[1000],c=0;

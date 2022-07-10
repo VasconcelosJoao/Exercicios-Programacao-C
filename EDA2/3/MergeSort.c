@@ -54,10 +54,10 @@ int main(int argc, char const *argv[])
     
     mergesort(N,0,C-1);
     
-    for(int i=0;i<c;i++)    
+    for(int i=0;i<C;i++)    
     {
         printf("%ld",N[i]);
-        if(i!=c-1)printf(" ");
+        if(i!=C-1)printf(" ");
     }
     printf("\n");
 

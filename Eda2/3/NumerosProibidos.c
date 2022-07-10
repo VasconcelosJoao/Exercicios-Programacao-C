@@ -6,7 +6,7 @@
 #define exch(A,B) { item t; t=A;A=B;B=t; }
 #define cmpexch(A,B) { if (less(B,A)) exch(A,B); }
 
-typedef int item;
+typedef long int item;
 
 void merge(item *V, int l, int m, int r)
 {
@@ -69,13 +69,13 @@ int main(int argc, char const *argv[])
 {
     int N;
     scanf("%d",&N);
-    item itens[140000];
+    item itens[140001];
     for(int i=0;i<N;i++)
-        scanf("%d",&itens[i]);
+        scanf("%ld",&itens[i]);
     mergesort(itens,0,N-1);
 
-    int I[140000],c=0;
-    while(scanf("%d",&I[c])==1)
+    long int I[140001],c=0;
+    while(scanf("%ld",&I[c])==1)
         c++;
 
     for (int i = 0; i < c; i++)

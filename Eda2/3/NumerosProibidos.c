@@ -43,16 +43,16 @@ void mergesort(item *V,int l, int r)
 }
 
 
-void printFunc(item *v,int code,int N){
+void printFunc(item *v,long int number,int N){
     int menor=0,maior=N-1,medio;
         while(menor<=maior){
             medio =(maior+menor)/2;
-            if(v[medio]==code)
+            if(v[medio]==number)
             {
                 printf("sim\n");
                 return;
             }
-            else if(v[medio]>code)
+            else if(v[medio]>number)
             {
                 maior = medio - 1;
             }
@@ -74,7 +74,7 @@ int main(int argc, char const *argv[])
         scanf("%ld",&itens[i]);
     mergesort(itens,0,N-1);
 
-    long int I[140001],c=0;
+    item I[800000],c=0;
     while(scanf("%ld",&I[c])==1)
         c++;
 

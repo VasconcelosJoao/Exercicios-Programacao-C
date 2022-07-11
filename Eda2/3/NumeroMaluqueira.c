@@ -15,18 +15,12 @@ void merge(item *V,  int l,  int m,  int r)
 item *R=malloc(sizeof(item)*(r-l+1));
  int i=l,j=m+1,k=0;
 while(i<=m && j<=r)
-{
-if(less(V[i],V[j]))
-    R[k++]=V[i++];
-else
-    if(V[i]==V[j])
-    {
-        j++;
-        _Tam--;
-    }
+  {
+    if(lesseq(V[i],V[j]))
+      R[k++]=V[i++];
     else
-    R[k++]=V[j++];
-}
+      R[k++]=V[j++];
+  }
 while(i<=m)
     R[k++]=V[i++];
 while(j<=r)
@@ -35,6 +29,7 @@ k=0;
 
 for(i=l;i<=r;i++)
     V[i]=R[k++];
+
 free(R);
 }
 
@@ -47,7 +42,16 @@ mergesort(V,meio+1,r);
 merge(V,l,meio,r);
 }
 
+void removeR(item *v)
+{
+int size = 1;
+for(int i=1;i<_Tam;i++)
+    if(v[i] != v[size-1])
+        v[size++]=v[i];
 
+_Tam=size;
+return;
+}
 
 int main(int argc, char const *argv[])
 {
@@ -58,6 +62,8 @@ _Tam=N;
 for (int i=0;i<N;i++)
     scanf("%ld",&x[i]); 
 mergesort(x,0,_Tam-1);
+removeR(x);
+
 if(_Tam%2!=0)
     x[_Tam++]=1000000000;
 int num=_Tam/2;
@@ -65,14 +71,12 @@ int add[num];
 for(int i=0;i<num;i++) 
     x[_Tam++]=x[i*2]+x[(i*2)+1];
 mergesort(x,0,_Tam-1);
-
+removeR(x);
+// for(int i=0;i<_Tam;i++)
+//     printf("%ld\n",x[i]);
 for(int i=0;i<_Tam;i+=4)
     printf("%ld\n",x[i]);
-
-
-// for (int i=0;i<_Tam;i++)
-//     printf("%d ",x[i]);
-printf("Elemento: %d\n",_Tam);
+printf("Elementos: %d\n",_Tam);
     
     return 0;
 }

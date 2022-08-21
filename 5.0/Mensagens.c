@@ -25,17 +25,6 @@ typedef struct HashTable
 #define eq(a, b) (a.k == b.k)
 
 #ifdef STRING_HASH
-#define VALOR_INICIAL 5381
-#define VALOR_MULTIPLO 33
-unsigned hashu(const char *x)
-{
-    unsigned h = VALOR_INICIAL;
-    for (int i = 0; x[i] != '\0'; i++)
-        h = (h * VALOR_MULTIPLO + x[i]) % HT_SIZE;
-    return h;
-}
-#define key_t const char *
-#define hash_k(k) (hashu(k))
 #define eq_k(x, k) (strcmp(key(x), k) == 0)
 #else
 #define hash_k(k) (k % HT_SIZE)
